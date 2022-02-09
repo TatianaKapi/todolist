@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_08_140358) do
+ActiveRecord::Schema.define(version: 2022_02_08_173642) do
 
   create_table "todo_items", force: :cascade do |t|
     t.string "content"
     t.integer "todo_list_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.datetime "completed_at", precision: 6
     t.index ["todo_list_id"], name: "index_todo_items_on_todo_list_id"
   end
 
